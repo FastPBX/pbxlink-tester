@@ -1,0 +1,1 @@
+{"version":3,"file":"ErrorTest.js","sourceRoot":"","sources":["../../src/tests/ErrorTest.ts"],"names":[],"mappings":";;AAAA,iCAAkD;AAElD,MAAa,SAAU,SAAQ,WAAI;IAE/B,GAAG,CAAC,OAAY;QACZ,OAAO,OAAO,CAAC,MAAM,CAAC;YAClB,OAAO,EAAE,KAAK;YACd,OAAO,EAAE,cAAc;SAC1B,CAAC,CAAC;IACP,CAAC;CAEJ;AATD,8BASC"}

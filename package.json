@@ -1,0 +1,35 @@
+{
+  "name": "pbx-tester-runner",
+  "version": "0.1.0",
+  "description": "FastPBX Test Runner For Rest & GQL Endpoints",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "compile": "tsc",
+    "dev": "nodemon --watch '*.ts' --exec 'ts-node' src/server.ts"
+  },
+  "author": "David Melo <david.melo@fastpbx.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.1.0",
+    "axios": "^0.19.0",
+    "bull": "^3.11.0",
+    "bull-arena": "^2.6.3",
+    "express": "^4.17.1",
+    "mailgun-js": "^0.22.0",
+    "pug": "^2.0.4",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/yup": "^0.26.24",
+    "@types/axios": "^0.14.0",
+    "@types/bull": "^3.10.3",
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.7",
+    "nodemon": "^1.19.2",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  }
+}

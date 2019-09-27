@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+
+    head
+        style(type='text/css').
+            table.minimalistBlack {
+                border: 2px solid #000000;
+                width: 100%;
+                text-align: left;
+                border-collapse: collapse;
+            }
+
+            table.minimalistBlack td, table.minimalistBlack th {
+                border: 1px solid #000000;
+                padding: 5px 4px;
+            }
+
+            table.minimalistBlack tbody td {
+                font-size: 13px;
+            }
+
+            table.minimalistBlack thead {
+                background: #CFCFCF;
+                background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+                background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+                background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+                border-bottom: 3px solid #000000;
+            }
+
+            table.minimalistBlack thead th {
+                font-size: 15px;
+                font-weight: bold;
+                color: #000000;
+                text-align: left;
+            }
+
+            table.minimalistBlack tfoot {
+                font-size: 14px;
+                font-weight: bold;
+                color: #000000;
+                border-top: 3px solid #000000;
+            }
+
+            table.minimalistBlack tfoot td {
+                font-size: 14px;
+            }
+
+    body
+
+        h3 Critical Test Failure
+        table.minimalistBlack
+            tr
+                th Test Name
+                th Status
+                th Failure Message
+            tr
+                td=data.failure.test
+                td=data.failure.success?'Passed':'Failed'
+                td=data.failure.message
+
+        h3 Completed Test Results
+        table.minimalistBlack
+            tr
+                th #
+                th Test Name
+                th Status
+                th Priority
+                th Success Message
+            each item, index in data.results
+                tr
+                    td=index+1
+                    td=item.test.id
+                    td=item.result.success?'Passed':'Failed'
+                    td=item.test.critical?'Critical':'Normal'
+                    td=item.result.message
+
+        h3 Test Summary
+        table.minimalistBlack
+            tr
+                th Tests
+                th Completed
+                th Passed
+                th Failed
+                th Completion Percentage
+            tr
+                td=data.status.total
+                td=data.status.completed
+                td=data.status.passed
+                td=data.status.failed
+                td=data.status.progress+'%'
