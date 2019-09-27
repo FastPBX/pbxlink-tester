@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const TestQueue_1 = require("./TestQueue");
 const bull_arena_1 = __importDefault(require("bull-arena"));
-const testConfigObjects = require("./testCases.json");
+const testConfigObjects = require("../testCases.json");
 const app = express_1.default();
 const port = 3000;
 const DefaultQueue = new TestQueue_1.TestQueue();

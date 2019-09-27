@@ -3,7 +3,7 @@ import {TestQueue} from "./TestQueue";
 import {TestConfigInterface} from "./tests/Test";
 import Arena from 'bull-arena';
 
-const testConfigObjects: TestConfigInterface[] =  require("./testCases.json");
+const testConfigObjects: TestConfigInterface[] =  require("../testCases.json");
 
 const app = express();
 const port = 3000;
