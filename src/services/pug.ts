@@ -4,7 +4,7 @@ const RenderTemplate = function(template: string, options: object): Promise<stri
 
     return new Promise<string>((resolve, reject) => {
 
-        let html = pug.renderFile(`${process.env.PWD}/src/templates/${template}.pug`, options);
+        let html = pug.renderFile(`../templates/${template}.pug`, options);
         return resolve(html);
 
     });
