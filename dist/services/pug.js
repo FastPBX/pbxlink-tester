@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const pug_1 = __importDefault(require("pug"));
 const RenderTemplate = function (template, options) {
     return new Promise((resolve, reject) => {
-        let html = pug_1.default.renderFile(`${process.env.PWD}/src/templates/${template}.pug`, options);
+        let html = pug_1.default.renderFile(`../templates/${template}.pug`, options);
         return resolve(html);
     });
 };
