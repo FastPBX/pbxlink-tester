@@ -20,7 +20,7 @@ DefaultQueue.addJob({
     tests: testConfigObjects,
 },
 {
-    repeat: { cron: '* * * * *' }
+    repeat: { cron: process.env.TEST_SCHEDULE }
 });
 
 app.get("/", (req, res) => {
