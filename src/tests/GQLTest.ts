@@ -57,14 +57,20 @@ export class GQLTest extends Test implements GQLTestInterface {
 
                             } else {
 
-                                return reject('GraphQL Response Failed Validation');
+                                return reject({
+                                    success: false,
+                                    message: 'GraphQL Response Failed Validation'
+                                });
 
                             }
 
                         })
                         .catch(_ => {
 
-                            return reject('GraphQL Response Failed Validation');
+                            return reject({
+                                success: false,
+                                message: 'GraphQL Response Failed Validation'
+                            });
 
                         });
 
@@ -75,7 +81,10 @@ export class GQLTest extends Test implements GQLTestInterface {
                         return m.message;
                     }).join('; ');
 
-                    return reject(`GQL Errors: ${requestError}`);
+                    return reject({
+                        success: false,
+                        message: `GQL Errors: ${requestError}`
+                    });
 
                 });
 
