@@ -10,7 +10,7 @@ let validationSchema = yup.array(
             yup.object({
                 number_to: yup.string().required(),
                 number_from: yup.string().required(),
-                body: yup.string().required(),
+                body: yup.string(),
             })
         )
     })
