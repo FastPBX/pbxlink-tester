@@ -16,7 +16,7 @@ let validationSchema = yup.array(yup.object({
     messages: yup.array(yup.object({
         number_to: yup.string().required(),
         number_from: yup.string().required(),
-        body: yup.string().required(),
+        body: yup.string(),
     }))
 }));
 class GetNumberConversationsTest extends GQLTest_1.GQLTest {

@@ -38,18 +38,27 @@ class GQLTest extends Test_1.Test {
                         });
                     }
                     else {
-                        return reject('GraphQL Response Failed Validation');
+                        return reject({
+                            success: false,
+                            message: 'GraphQL Response Failed Validation'
+                        });
                     }
                 })
                     .catch(_ => {
-                    return reject('GraphQL Response Failed Validation');
+                    return reject({
+                        success: false,
+                        message: 'GraphQL Response Failed Validation'
+                    });
                 });
             })
                 .catch(errors => {
                 let requestError = errors.map((m) => {
                     return m.message;
                 }).join('; ');
-                return reject(`GQL Errors: ${requestError}`);
+                return reject({
+                    success: false,
+                    message: `GQL Errors: ${requestError}`
+                });
             });
         });
     }
