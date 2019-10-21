@@ -27,7 +27,7 @@ exports.GraphQLRequest = function (options) {
             }
         })
             .catch((e) => {
-            return reject(e.response.data);
+            return reject(e);
         });
     });
 };

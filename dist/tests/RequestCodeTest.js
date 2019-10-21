@@ -30,7 +30,7 @@ class RequestCodeTest extends Test_1.Test {
                 });
             })
                 .catch((e) => {
-                return reject(e.response.data);
+                return reject(e);
             });
         });
     }
