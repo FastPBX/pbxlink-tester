@@ -29,7 +29,7 @@ export class RequestTokenTest extends Test {
                     })
                 })
                 .catch((e: AxiosError)=>{
-                    return reject(e.response.data)
+                    return reject(e)
                 });
 
         });

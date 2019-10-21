@@ -30,7 +30,7 @@ export const GraphQLRequest = function(options: GraphQLRequestInterface): Promis
                 }
             })
             .catch((e: AxiosError)=>{
-                return reject(e.response.data)
+                return reject(e)
             });
 
     });
